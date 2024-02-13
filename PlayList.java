@@ -217,11 +217,12 @@ class PlayList {
         // Uses the selection sort algorithm,
         // calling the minIndex method in each iteration.
         for (int i = 0; i < size - 1; i++){
-            int minIndex = minIndex(i);
+            int minIndex = minIndex(i); // check the min index from i.
+            // check if min index is not i.
             if (minIndex != i) {
-                Track track = tracks[i];
-                tracks[i] = tracks[minIndex];
-                tracks[minIndex] = track;
+                Track track = tracks[i]; // save track i.
+                tracks[i] = tracks[minIndex]; // change track i to the min track.
+                tracks[minIndex] = track; // change the min track to the i'th track.
             }
         }
     }
